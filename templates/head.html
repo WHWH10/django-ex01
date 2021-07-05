@@ -21,6 +21,29 @@
   <!-- LOAD CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
 
+  <style>
+    @font-face {
+      font-family: 'NanumSquareOTFBold',
+      src: local('NanumSquareOTFBold'),
+      url("{% static 'fonts/NanumSquareOTFBold.otf'%}") format("opentype");
+    }
+    @font-face {
+      font-family: 'NanumSquareOTFExtraBold',
+      src: local('NanumSquareOTFExtraBold'),
+      url("{% static 'fonts/NanumSquareOTFExtraBold.otf'%}") format("opentype");
+    }
+    @font-face {
+      font-family: 'NanumSquareOTFLight',
+      src: local('NanumSquareOTFLight'),
+      url("{% static 'fonts/NanumSquareOTFLight.otf'%}") format("opentype");
+    }
+    @font-face {
+      font-family: 'NanumSquareOTFRegular',
+      src: local('NanumSquareOTFRegular'),
+      url("{% static 'fonts/NanumSquareOTFRegular.otf'%}") format("opentype");
+    }
+  </style>
+
   <!-- GOOGLE FONT LINK-->
   {% comment %}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
