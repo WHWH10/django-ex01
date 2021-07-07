@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-  </head>
-  <body></body>
+<html lang="ko">
+  {% include 'head.html' %}
+  <body style="font-family: 'NanumSquareOTFRegular'">
+    {% include 'header.html' %}
+    <hr />
+    {% block content %}{% endblock %}
+    <hr />
+    {% include 'footer.html' %}
+  </body>
 </html>

@@ -1,0 +1,43 @@
+.pragmatic_logo {
+  font-family: "Otomanopee One", sans-serif;
+}
+
+.pragmatic_header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pragmatic_footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pragmatic_footer_font_size {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width:500px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.prgmatic_header_nav {
+  color: black;
+  margin: 0 0.5rem;
+}
+
+.prgmatic_header_navbar {
+  margin: 1rem;
+  
+}

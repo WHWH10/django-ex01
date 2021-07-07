@@ -1,0 +1,36 @@
+<div class="pragmatic_header">
+  <div class="pragmatic_logo">
+    <h1>Pragmatic</h1>
+  </div>
+
+  <div style="text-decoration: none;" class="prgmatic_header_navbar">
+    <a href="{% url 'articleapp:list' %}" class="prgmatic_header_nav" style="text-decoration: none; color: black;">
+      <span>Articles</span>
+    </a>
+    <a href="{% url 'projectapp:list' %}" class="prgmatic_header_nav" style="text-decoration: none; color: black;">
+      <span>Projects</span>
+    </a>
+    <a href="{% url 'subscribeapp:list' %}" class="prgmatic_header_nav" style="text-decoration: none; color: black;">
+      <span>Subscription</span>
+    </a>
+    {% if not user.is_authenticated %}
+    <a href="{% url 'accountapp:login' %}?next={{ request.path }}" class="prgmatic_header_nav"
+      style="text-decoration: none; color: black;"">
+      <span>Login</span>
+    </a>
+    <a href=" {% url 'accountapp:create' %}?next={{ request.path }}" class="prgmatic_header_nav"
+      style="text-decoration: none; color: black;">
+      <span>SignUp</span>
+    </a>
+    {% else %}
+    <a href="{% url 'accountapp:detail' pk=user.pk %}" class="prgmatic_header_nav"
+      style="text-decoration: none; color: black;">
+      <span>MyPage</span>
+    </a>
+    <a href="{% url 'accountapp:logout' %}?next={{ request.path }}" class="prgmatic_header_nav"
+      style="text-decoration: none; color: black;">
+      <span>Logout</span>
+    </a>
+    {% endif %}
+  </div>
+</div>
