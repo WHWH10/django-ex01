@@ -1,9 +1,19 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 <style>
+  .container {
+    padding: 0;
+    margin: 0, auto;
+  }
+
+  .container a {
+    width: 45%;
+    max-width: 250px;
+  }
+
   .container div {
-    width: 250px;
-    background-color: antiquewhite;
+    /* width: 250px; */
+    /* background-color: antiquewhite; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,9 +44,7 @@
   
   {% include 'snippets/pagination.html' with page_obj=page_obj%}
   
-  
-  {% comment %}
-  <div class="item1">
+    <!-- <div class="item1">
     <img src="https://picsum.photos/200/300" alt="" />
   </div>
   <div class="item2">
@@ -75,19 +83,18 @@
   </div>
   <div class="item13">
     <img src="https://picsum.photos/200/439" alt="" />
-  </div>
-  {% endcomment %}
+  </div> -->
 </div>
 
 <div style="text-align: center">
   <a
     href="{% url 'articleapp:create' %}"
-    class="btn btn-dark rounded-pill col-3 mt-3 mb-3"
+    class="btn btn-dark rounded-pill col-3 mt-3 mb-3 px-3"
   >
     Create Article
   </a>
 </div>
 
-{% comment %} <script src="{% static 'js/magicgrid.js' %}"></script> {% endcomment %}
+<!-- {% comment %} <script src="{% static 'js/magicgrid.js' %}"></script> {% endcomment %} -->
 
 {% endblock %}

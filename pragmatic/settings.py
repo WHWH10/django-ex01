@@ -26,13 +26,13 @@ environ.Env.read_env(env_file=os.path.join(BASE_DIR, ".env"))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "django-insecure-h33j^b*_4#%sxy+4vltq#f!m%r4n+zavo_=*5e)32g(2)afz#1"
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = "django-insecure-h33j^b*_4#%sxy+4vltq#f!m%r4n+zavo_=*5e)32g(2)afz#1"
+# SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "profileapp",
     "articleapp",
     "commentapp",
+    "projectapp",
+    "subscribeapp",
 ]
 
 MIDDLEWARE = [
@@ -135,7 +137,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-LOGIN_REDIRECT_URL = reverse_lazy("accountapp:hello_world")
+LOGIN_REDIRECT_URL = reverse_lazy("home")
 LOGOUT_REDIRECT_URL = reverse_lazy("accountapp:login")
 
 MEDIA_URL = "/media/"
